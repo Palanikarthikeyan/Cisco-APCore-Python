@@ -711,3 +711,597 @@ D2
 'Dz'
 >>>
 ----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+>>> s='101,raj,sales,bglore,1000'
+>>>
+>>> type(s)
+<class 'str'>
+>>>
+>>> len(s)
+25
+>>> # split - single data ->multiple values
+>>> # --------------------  =============== //list
+>>>
+>>> # stringName.split(fsep) -> [output_list]
+>>> # ---------- =============================
+>>>
+>>> s.split(',')
+['101', 'raj', 'sales', 'bglore', '1000']
+>>>
+>>> L = s.split(',')
+>>>
+>>> type(L)
+<class 'list'>
+>>> len(L)
+5
+>>>
+
+>>> L
+['101', 'raj', 'sales', 'bglore', '1000']
+>>>
+>>> "".join(L)
+'101rajsalesbglore1000'
+>>>
+>>> ",".join(L)
+'101,raj,sales,bglore,1000'
+>>>
+>>> "\t".join(L)
+'101\traj\tsales\tbglore\t1000'
+>>>
+>>> print("\t".join(L))
+101     raj     sales   bglore  1000
+>>>
+>>>
+>>>
+>>>
+>>>
+>>> # python Supports multiple initialization
+>>> # -----------------------------------------
+>>>
+>>> var1,var2,var3 = 10,2.45,True
+>>>
+>>> L1,L2 = [],[]
+>>>
+>>>
+>>>
+>>> var1,var2,var3 = 10,2.45,True,'data'
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: too many values to unpack (expected 3)
+>>>
+>>>
+>>> var1,var2,var3 = 10,2.45
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: not enough values to unpack (expected 3, got 2)
+>>>
+>>>
+>>> app_info = ['Flask',5000,'flask.conf',True,98.45]
+>>>
+>>> app_info[0]
+'Flask'
+>>>
+>>> app_name = app_info[0]
+>>> app_port = app_info[1]
+>>> app_file = app_info[2]
+>>> app_status = app_info[3]
+>>> app_utilization = app_info[-1]
+>>>
+>>> app_name
+'Flask'
+>>> app_port
+5000
+>>>
+>>> v1,v2,v3,v4,v5 = app_info
+>>>
+>>> v1
+'Flask'
+>>> v2
+5000
+>>> v3
+'flask.conf'
+>>> v4
+True
+>>> v5
+98.45
+>>>
+
+>>> s='101,raj,sales,bglore,1000'
+>>>
+>>> s.split(',')
+['101', 'raj', 'sales', 'bglore', '1000']
+>>>
+>>> eid,ename,edept,eplce,ecost = s.split(',')
+>>> ###########################   =============
+>>> eid
+'101'
+>>> ename
+'raj'
+>>> edept
+'sales'
+>>> eplce
+'bglore'
+>>> ecost
+'1000'
+>>>
+>>> int(ecost) * 0.18
+180.0
+>>>
+
+Write a python program:
+
+ -> create an empty list (pin_history = [])
+ |
+ -> modify the pin_number program 
+	|
+        |->user input pinNumber + count -- append to list
+			 |->(Success/Failed) ..............
+
+ |
+ -> use for loop - iterate pin_history details
+
+=============================================================================
+Write a python program:
+
+Given List =>   
+Emp = ["101,raj,sales,pune,1000","102,leo,prod,bglore,2000","103,paul,HR,bglore,3000","104,shiv,QA,mumbai,4000"]
+
+|
+|-> display Emp name (TitleCase) - Working City name( uppercase )
+|-> Calculate Sum of Emp's Cost
+|
+|-> display Total Sum of Emp's Cost - at the end of the line
+==========================================================================================================
+Write a python program:
+create an empty list
+|
+use while loop - limit is 5
+	->read a device name from <STDIN>
+	->add/append input device to an existing list
+
+use for loop - iterate an inputlist one by one
+|
+use len() - display no.of devices from given list
+-------------------------------------------------------------------------------------------------------
+
+list - [] - Collection of items(different types) - index based - mutable 
+| 								==========
+|-> supports index,slicing,membership,for loop,len() 
+|
+tuple - () - Collection of items(different types) - index based - immutable 
+ |								 ===========
+ |-> supports index,slicing,membership,for loop,len() 
+	
+L = ["D1","D2",10,20.55,True]
+
+T = ("D1","D2",10,20.55,True)  <== Tuple
+      0  |  1 | 2|  3  | 4 <== index
+
+T[0] -> "D1"
+T[1] -> "D2"
+
+T[-1] -->True
+T[-2:] ------->(20.55,True)
+
+v1,v2,v3,v4,v5 = T  # multiple initialization
+
+
+"D1" in T
+
+for var in T:   
+    print(var)
+
+---------------------------------------------------------------------------------------
+ T[1] = "Data" # Error -- tuple is immutable 
+ -----
+
+
+>>> config_files = ('/etc/f1','/etc/f2','/etc/f3')
+>>>
+>>> type(config_files)
+<class 'tuple'>
+>>>
+>>> # add - winx config file
+>>> # delete 0th index /etc/f1
+>>> # modify /etc/f2 -> /etc/hosts
+>>> # -----
+>>>
+>>> # typecast to list  -->  list(input_tuple)
+>>>
+>>> list(config_files)
+['/etc/f1', '/etc/f2', '/etc/f3']
+>>>
+>>> tv = list(config_files)
+>>> tv.append('C:\\win\\profile')
+>>> tv
+['/etc/f1', '/etc/f2', '/etc/f3', 'C:\\win\\profile']
+>>> tv.pop(0)
+'/etc/f1'
+>>> tv
+['/etc/f2', '/etc/f3', 'C:\\win\\profile']
+>>> tv[0] = "/etc/hosts"
+>>>
+>>> tv
+['/etc/hosts', '/etc/f3', 'C:\\win\\profile']
+>>>
+>>> # typecast to tuple --> tuple(input_list)
+>>>
+>>> tuple(tv)
+('/etc/hosts', '/etc/f3', 'C:\\win\\profile')
+>>>
+>>> config_files = tuple(tv)
+>>>
+>>> config_files
+('/etc/hosts', '/etc/f3', 'C:\\win\\profile')
+>>>
+-------------------------------------------------------------------------------------------------------
+
+str,bytes,list,tuple 
+---------------------// index based 
+			------------//ordered data items
+
+------------------------------------------------------------------------------------------------------
+
+ L = ['raj','sales',1000] # 1D
+ |      0       1     2
+ L[0] -> 'raj'
+ L[1] -> 'sales'
+ L[-1]  -> 1000
+
+
+list of list  
+-----   ====
+ |	  0      1     2       0      1    2       0    1    2        0    1     2
+ L = [ ['raj','sales',1000],['leo','prod',2000],['anu','Hr',3000],['shiv','QA',4000] ] # MD
+                           |                   |                 |
+		0		   1			2		3   <== index
+
+len(L) -> 4
+
+L[0] => ['raj','sales',1000]  => L[0][0] -> 'raj'
+			      => L[0][1] -> 'sales'
+
+		0     1     2   
+     L[1] -->['leo','prod',2000]  =>L[1][1] -->'prod'
+
+
+L[1][1] = 'Devops' # we can modify nth data - list is mutable 
+
+print(L)
+[ ['raj','sales',1000],['leo','Devops',2000],['anu','Hr',3000],['shiv','QA',4000] ]
+
+
+L[1].append('Dx')  
+-----------------     
+['leo','Devops',2000,'Dx'] 
+
+Vs
+L.append('Dy')
+----------------
+[ ['raj','sales',1000],['leo','Devops',2000],['anu','Hr',3000],['shiv','QA',4000],'Dy']
+
+
+list of tuple
+-------=========
+
+	  0	 1	2	0    1     2       0    1   2       0      1    2
+ L = [ ('raj','sales',1000),('leo','prod',2000),('anu','Hr',3000),('shiv','QA',4000) ] # MD
+       ====================|===================|=================|================== 
+		0th index	1st index	  2nd index	      3rd index
+
+
+L[0] -->('raj','sales',1000) ==> L[0][0] -> raj
+			     ==> L[0][1] -> sales
+			     ==> L[0][-1] -->1000
+
+L[1] -->('leo','prod',2000) ===> L[1][0] --> 'leo'
+				 L[1][1] --> 'prod'
+				 L[1][-1] ---> 2000
+
+ 1tuple - 1row/1record 
+
+print(type(L)) --> <class 'list'>
+|
+print(type(L[0])) --><class 'tuple'>
+
+>>> L=[]
+>>> L.append('D1')
+>>> L
+['D1']
+>>> L.append([10,20,30,40,50]) # list of list
+>>> L
+['D1', [10, 20, 30, 40, 50]]
+>>>
+>>> L.append((11.45,33.32,0.32)) # list of tuple
+>>>
+>>> L
+['D1', [10, 20, 30, 40, 50], (11.45, 33.32, 0.32)]
+>>>
+>>> L[0]
+'D1'
+>>> L[1]
+[10, 20, 30, 40, 50]
+>>> L[2]
+(11.45, 33.32, 0.32)
+>>>
+
+tuple of list  ====> ([],[],[],[])
+=====   -----  			 
+
+tuple of tuple ----> ((),(),()) <== 
+=====    -----
+
+
+Recap
+--------
+list - mutable structure 
+tuple - immutable structure 
+
+
+>>> T=([],[],[])
+>>> type(T)
+<class 'tuple'>
+>>>
+>>> len(T)
+3
+>>> type(T[0])
+<class 'list'>
+>>> T[0].append('d1')
+>>> T[0].append('d2')
+>>> T[0].append('d3')
+>>> T[0].append('d4')
+>>> T[0].append('d5')
+>>> T[0].append('d6')
+>>>
+>>> len(T)
+3
+>>> T
+(['d1', 'd2', 'd3', 'd4', 'd5', 'd6'], [], [])
+>>> T[0][0]
+'d1'
+>>> T[0][0] = 'data1' # Vs T[0] = 'data' - Error
+>>> T
+(['data1', 'd2', 'd3', 'd4', 'd5', 'd6'], [], [])
+>>>
+
+
+>>> T=(('D1','d2'),(10,20,30)) # tuple of tuple 
+>>>
+>>> T[0][0]
+'D1'
+>>> T[0][-1]
+'d2'
+>>>
+>>> T[1][0]
+10
+>>>
+--------------------------------------------------------------------------------------------------------
+Table - product
+ +-----------------------------------+
+ | prodName | prodID | prodCost |
+ +-----------------------------------+
+ | pA      | 101 | 1000
+ +-----------------------------------+
+ | pB      | 102 | 2000
+ +-----------------------------------+
+ | pC      | 103 | 3000
+ +-----------------------------------+
+
+select *from product <== SQL 
+ |------------------------->--------------------> [(pA,101,1000),(pB,102,2000),(pC,103,3000)]
+
+--------------------------------------------------------------------------------------------------------
+
+>>> T=([],[],[])
+>>> type(T)
+<class 'tuple'>
+>>>
+>>> len(T)
+3
+>>> type(T[0])
+<class 'list'>
+>>> T[0].append('d1')
+>>> T[0].append('d2')
+>>> T[0].append('d3')
+>>> T[0].append('d4')
+>>> T[0].append('d5')
+>>> T[0].append('d6')
+>>>
+>>> len(T)
+3
+>>> T
+(['d1', 'd2', 'd3', 'd4', 'd5', 'd6'], [], [])
+>>> T[0][0]
+'d1'
+>>> T[0][0] = 'data1' # Vs T[0] = 'data' - Error
+>>> T
+(['data1', 'd2', 'd3', 'd4', 'd5', 'd6'], [], [])
+>>>
+>>>
+>>> T=(('D1','d2'),(10,20,30))
+>>>
+>>> T[0][0]
+'D1'
+>>> T[0][-1]
+'d2'
+>>>
+>>> T[1][0]
+10
+>>>
+-----------------------------------------------------------------------------------------------
+
+dictionary - dict 
+--------------------
+ |->Collection of data - key:value // - NOT index based - {} - mutable 
+
+ |-> env variable,meta data,web header info,web scrabing,json objects,network property config file etc.,
+     .................................................................................................
+	
+
+ dictName = {'Key1':value,'Key2':value,'Key3':value,...'Kn':'Vn'}
+	           	 |            |            |          
+
+ dict keys are unique  
+ dict value can duplicate 
+
+ python immutable structres - int,float,bool,str,bytes,tuple //dict key
+
+
+ d = {10: 'V1',True: 50,1.3: 'data', ():'data1'}  //OK
+   ...............................................
+
+
+d={'K1':10,'K2':20,'K1':'data1'}
+    |_______________|//duplicate key ->overwrite an existing key
+
+print(d) ==> {'K1':'data1' , 'K2':20}
+		--------------------
+
+
+d={'K1':10,'K2':10,'K3':10} 
+
+print(d)
+{'K1':10,'K2':10,'K3':10} 
+
+
+app_info = {'K1':'TestApp','K2':1234,'K3':'/etc/test.conf'}  
+
+
+	Key  |  Value
+	-----|------------------
+	K1   |  TestApp
+	-----|------------------
+	K2   |  1234
+	-----|------------------
+	K3   | /etc/test.conf
+	-----|------------------
+	..
+	..
+	..
+	-----|------------------
+
+
+
+
+
+>>> L=['D1',10,4.5,True]
+>>>
+>>> # | D1 | 10 | 4.5 | True |
+>>> # |----|----|-----|------|
+>>> # | 0  |  1 |  2  |   3  | <== index
+>>> # +----+----+-----+------+
+>>>
+>>> # How to fetch nth index
+>>>
+>>> L[1]
+10
+>>> # L[index] -> Value/Index Error
+>>>
+>>> # How to modify an existing value from list?
+>>> #
+>>> L[1] = 'Data-1'  # Listname[oldIndex] = updatedValue
+>>>
+>>> # How to add newdata to an existing list?
+>>> #
+>>> L.append('Dx')
+>>> L.insert(1,'Dy')
+>>> L
+['D1', 'Dy', 'Data-1', 4.5, True, 'Dx']
+>>>
+>>>
+>>> L.pop()
+'Dx'
+>>> L.pop(2)
+'Data-1'
+>>>
+>>>
+>>> for var in L:
+...     print(var)
+...
+D1
+Dy
+4.5
+True
+>>>
+>>>
+>>> d={'K1':'D1','K2':10,'K3':4.5,'K4':True}
+>>>
+>>> #  Key    |  Value
+>>> # --------|---------
+>>> #  K1     |   D1
+>>> # --------|---------
+>>> #  K2     |   10
+>>> # --------|---------
+>>> #  K3     |   4.5
+>>> # --------|----------
+>>> #  K4     |  True
+>>> # --------------------
+>>>
+>>> # How to fetch nth data
+>>> # dictName['oldKey'] -->Value /KeyError
+>>>
+>>> d['K1']
+'D1'
+>>> d['k1']
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+KeyError: 'k1'
+>>>
+>>> # How to modify an existing value from dict?
+>>> # dictName[oldKey] = updatedValue
+>>>
+>>> d['K1'] = 'Data-1'
+>>> d
+{'K1': 'Data-1', 'K2': 10, 'K3': 4.5, 'K4': True}
+>>>
+>>> # To add new data to an existing dict
+>>> # dictName['newKey'] = Value
+>>> # -----------------------------
+>>>
+>>> d['K5'] = 4.35 # add operation
+>>>
+>>> d
+{'K1': 'Data-1', 'K2': 10, 'K3': 4.5, 'K4': True, 'K5': 4.35}
+>>>
+>>> d.pop('K2')
+10
+>>> # To delete nth data from dict
+>>> #
+>>> # dictname.pop(oldKey) ->removedValue / KeyError
+>>> #              ------                   ---------
+>>>
+>>> for var in d:
+...     print(var) # list of key only
+...
+K1
+K3
+K4
+K5
+>>> d['K1']
+'Data-1'
+>>>
+>>> for var in d:
+...     print(d[var]) # list of value
+...
+Data-1
+4.5
+True
+4.35
+>>> for var in d:
+...     print(f'{var}  {d[var]}')
+...
+K1  Data-1
+K3  4.5
+K4  True
+K5  4.35
+>>>
+>>> # memebership operators -> key is existing or not
+>>>
+>>> 'K1' in d
+True
+>>> 'K2' in d
+False
+>>> # inputKey in inputdict ->output_bool
+>>>
+===============================================================================================================
+
