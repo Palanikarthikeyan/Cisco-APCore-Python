@@ -1,0 +1,713 @@
+Python Programming
+------------------
+   |-> Direct approach style - procedure style code 
+   |-> Object Oriented style - OOPs
+   |-> Functional style programming - Expression style - computation
+
+new to python / programming
+............................
+ 
+ 1. Understand the Topic - definition  - what is <topicName>
+			  what is variable ?
+			  what is type() ?
+			   ...
+
+ 2. Understand the topic Syntax - Rule
+
+ 3. Examples 
+ |
+ 4. Exercise
+ |
+ Core - Python programming
+ |
+ Modules 
+ 
+------------------------------------------------------------
+
+
+variable = value <== initialization
+
+
+Compiler - C program
+---------------------
+ <data_type> variable ;
+  variable = value;
+
+     (or)
+<data_type> variable = value ;
+
+ int port;
+ port = 5000;
+ 
+    (or)
+ int port = 5000; 
+     ----   =====
+ 
+
+	Vs
+ In python - dynamic type programming
+ 
+  variable = value
+
+  port = 5000
+  app = "Flask"
+  LB = 98.42
+  ...................//initialization
+
+
+ Error
+ ------
+  1. Syntax Error - Not following python rules - won't start execution
+	|
+	print("Hello) 
+
+  2. Logical Error - following python rules - logical mistake
+    
+      var = 120
+      print(var) -> 120  Vs  print(Var) ->NameError
+
+===========================================================================================
+C:\Users\karth>
+C:\Users\karth>date
+The current date is: 09-09-2025
+Enter the new date: (dd-mm-yy)
+
+C:\Users\karth>whoami
+paka\karth
+
+C:\Users\karth>hostname
+paka
+
+C:\Users\karth>python
+Python 3.10.0 (tags/v3.10.0:b494f59, Oct  4 2021, 19:00:18) [MSC v.1929 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>>
+>>> print('Hello')
+Hello
+>>> 'Hello'
+'Hello'
+>>> print('Hello')
+Hello
+>>> print('version 3.56')
+version 3.56
+>>> print(3.56)
+3.56
+>>>
+>>> print(3.56$)
+  File "<stdin>", line 1
+    print(3.56$)
+              ^
+SyntaxError: invalid syntax
+>>>
+>>> print('3.56$')
+3.56$
+>>> exit()
+
+C:\Users\karth>
+
+===========================================================================================
+
+Python Comments
+-------------------
+ # - Single line comment
+
+ print(10+20) # simple arithmetic 
+ # print("OK") 
+ print('') # Empty line
+ 
+'''
+multiline comment
+statements
+'''
+
+"""
+
+"""
+
+print('asfasdfsdsdfs') # OK
+
+print('asfdsfdsfsda") # Error
+
+print("Hello") # OK
+ 
+--------------------------------------------------------------------------------------------------
+python native types (type --- class) 
+----------------------------------------
+ int float complex 
+ bool - True,False
+ NoneType - None 
+
+ Collection - more than one value
+ -----------
+	|-> index based - str,bytes,list,tuple
+	|-> key based - dict => {key:Value}//pair
+			  Vs
+		      - set - unique items
+			 -----------------
+
+type()
+
+1. what is type() ? - type() is used to determine python type/class
+|
+2. Syntax:-
+   ---------
+   type(AnyPythonValue)  (or) type(namedVariable)
+
+3. type('')
+   type(True)
+   type(10)
+   type(10.0)
+
+
+App 
+ |->app_name
+ |->version
+ |->codeNumber
+ |->Status 
+
+print('App name is: demoApp')
+print('App version is:1.23')
+print('App code number:456')
+print('App status: True')
+|
+multiline string
+-----------------
+print('''App name is:demoApp
+App version:1.23
+------------------------------
+App code number:456
+------------------------------
+App status: True''')
+
+|
+variable - namespace (or) placeholder - holding/mapping an existing python value
+-------
+Rules:
+-------
+variable name starts with A-Za-z_ (not starts with digits)
+
+variable name not allows space,specialchars
+
+App_name = 'demoApp'
+version = 1.23
+code = 456
+status = True
+=======  ===============
+|		|-------->python values
+user defined variable 
+
+
+
+Write a python program
+- initialize app details (AppName,Version,Code,Status)
+- use multiline string/statement - display app details line by line
+--------------------------------------------------------------------------
+
+
+Keyboard(<STDIN>) -------------<---------- Python ---------->------------ Monitor
+			 input()			  print()
+
+Syntax:-
+---------
+<variableName> = input('user defined _prompt message')
+		 -------------------------------------
+
+===================================================================================================
+typecasting
+-------------
+n = 10
+print(n+100) => 110
+
+n = '10'
+print(n+100) => Error  Vs int(n)+100 -->110
+			  ------
+'10' => 10
+         |
+ ---<-----
+
+
+<variableName> = input('user defined _prompt message')
+  |		 -------------------------------------
+  |
+  |->default return type is string
+
+
+------------------------------------------------------------------------------------------------------
+python operators
+------------------
+1. arithemtic operation  + - * / // % **  (inputs: int,float ->int,float)
+
+2. string operation + * (inputs: str,int -->str)
+|
+3. relational operators  == !=  <  <=  >  >= (inputs: int,float,str -->bool)
+|
+4. Logical operators  and or not 	    (inputs: int,float,str -->bool)
+		      ----------
+   ->Single conditional statement,test more than one condition 
+	port >500 and port <600
+	========================
+	shell_name == "bash" or shell_name == "powershell"
+	--------------------    -----------------------------
+	
+5. membership operators  in not in  (inputs: str,bytes,list,tuple,dict,set -->bool) 
+			 -- ======
+
+	'input_pattern_string' in inputCollection   -->bool(True/False)
+	 --------------------     ================
+
+		Vs
+6. identy operators is is not (inputs: native_types -->bool(True/False)
+		    -- ======
+
+>>> type(s1) is str
+True
+>>> type(s2) is str
+False
+>>>
+>>> type(s2) is int
+True
+>>> type(s2) is float
+False
+>>>
+>>> type(s2) is list
+False
+>>>
+
+In python any expression/function/method --->bool //use Conditional statement 
+.................................................
+Conditional statement 
+---------------------
+ ->Code block
+ ->Block - execute only one time 
+ -> if statement
+    |->if only
+    |->if else
+    |->if elif elif elif ..else 
+
+
+
+
+Write a python program:
+ - read a port number from <STDIN>
+ - test - input port number 501-599 -- initialize an app name is: testApp
+	  -------------------------
+				|------initialize an app name is: demoApp
+
+ - display - App name and running port number.
+
+-----------------------------------------------------------------------------------------------------
+Write a python program:
+- read a app name from <STDIN>
+   - test input app name is Flask (or) flask  - initialize port number is 5000
+						config file flask.conf
+
+   - test input app name is fastApi  - initialize port number is 5500
+				       config file fastApi.conf
+
+   - test input app name is prometheus - initialize port number is 9090
+					 config file prometheus.yaml
+
+   |->default app name - testApp ; port number: 8080 ; config file is:test.conf
+
+- display app name,port number and config filename
+-----------------------------------------------------------------------------------------------------
+
+Looping statements
+----------------------
+ |->Conditional style loop - while 
+    .................................
+	rule-1: initialization  i=0  i=5 i = 20   i = N
+	rule-2: condition	 < 5      <30 
+					  >10
+        rule-3: arithmetic  	i=i+1  (or) i+=1
+				i=i-1  (or) i-=1
+
+ |->Collection style loop  - for  
+	|
+	|->str,bytes,list,tuple,dict,set ...
+ 
+
+break - exit from loop
+-----
+continue - won't exit from loop
+--------
+|
+Write a python program:
+ - initialize a pin number: (ex: pin = 1234)
+ |
+ - use while loop  - limit is 5
+	|
+	|->read a pin Number from <STDIN>
+	|->test inputpin with existing an pin
+	|->	- display message - pin is matched - <Count> # 1 2 3
+	
+- maximum limit is 3
+|
+if all 3 inputs are failed -- display message => pin is blocked.
+----------------------------------------------------------------------------------------
+
+Write a python program:
+Given String => s = '123456789'
+		|
+		Calculate sum of given digits
+		-----------------------------
+Use - for loop
+------------------------------------------------------------------------------------------
+
+string (str)
+--------------
+ |-> Collection of chars 
+ |-> '' (or) ""
+ |-> index based => base index is called 0  
+
+ |-> 'hello' ==> | h | e | l | l | o |
+		 | 0 | 1 | 2 | 3 | 4 | <== index
+		 |-5 |-4 |-3 |-2 |-1 | <== index
+
+ |-> immutable - we can't modify 
+
+ |-> we can fetch/get nth data from given string 
+
+	 stringName[index] -> Value /IndexError 
+				
+ |-> s='hello'
+     print(s[0]) --> 'h'
+     print(s[1]) --> 'l'
+
+     print(s[-1]) --> 'o' 
+ 
+ 
+ |-> s[1] = 'x' <== Error -- string is immutable 
+
+ |-> del(s[1]) <== Error 
+ 
+ |-> len(input_string) -->output_int
+     ================== 
+
+ |-> slicing - range of /group of chars
+    .......................................
+
+	stringName[n:m]  -> from nth index to m-1 index
+	|
+	stringName[n:] -->from nth index to list of all
+		   ---
+	|
+	stringName[:m] -->from 0th index to m-1 index
+	
+>>> msg='Welcome to python programming API core'
+>>> len(msg)
+38
+>>> msg[15]
+'o'
+>>> msg[16]
+'n'
+>>> msg[3]
+'c'
+>>> msg[3:16] # from 3rd index to 15th index(16-1)
+'come to pytho'
+>>>
+>>> msg[3:] # from 3rd index to list of ALL
+'come to python programming API core'
+>>>
+>>>
+>>> msg[:3] # start from 0 to 2nd index(3-1)
+'Wel'
+>>>
+>>> msg[:16]
+'Welcome to pytho'
+>>>
+
+>>> msg[-5:] # last 5chars
+' core'
+>>>
+>>> msg[-3:] # last 3 chars
+'ore'
+>>>
+
+ pre-defined methods
+
+ help(str)
+
+obj.is....() ===>bool
+--- ========
+
+>>> s='python'
+>>>
+>>> s.upper()
+'PYTHON'
+>>>
+>>> 'ABCD'.lower()
+'abcd'
+>>>
+>>> s.isupper()
+False
+>>>
+>>> s.islower()
+True
+>>>
+>>> s1='45'
+>>> s2='abc'
+>>>
+>>> s1.isdigit()
+True
+>>> s2.isdigit()
+False
+>>>
+>>> if(s1.isdigit()):
+...     print(int(s1)+100)
+...
+145
+>>> if(s2.isdigit()):
+...     print(int(s2)+100)
+... else:
+...     print('Given string is not digit format')
+...
+Given string is not digit format
+>>>
+>>>
+>>>
+>>> s='data\n'
+>>> s.strip() # remove \n
+'data'
+>>>
+>>> s
+'data\n'
+>>>
+>>>
+>>> s.upper()
+'DATA\n'
+>>>
+>>> s
+'data\n'
+>>>
+>>> s.title()
+'Data\n'
+>>>
+>>> s
+'data\n'
+>>>
+>>>
+>>> s=s.title()
+>>>
+>>> s
+'Data\n'
+>>>
+>>> s=s.strip()
+>>> s
+'Data'
+>>>
+>>>
+
+>>> # str - collection of chars
+>>> #
+>>> # bytes = collection of ASCII code
+>>> # -----
+>>> #  b'....' <== python3.x
+>>>
+>>> msg="this is test message" # str
+>>>
+>>> msg[0]
+'t'
+>>> r = msg.encode()
+>>> type(r)
+<class 'bytes'>
+>>>
+>>> r[0]
+116
+>>> r.decode()
+'this is test message'
+>>>
+>>> s=r.decode()
+>>> s[0]
+'t'
+>>>
+===================================================================================================
+>>> bool(123213131231231)
+True
+>>>
+>>> bool(0)
+False
+>>> bool('')
+False
+>>> bool(0.0)
+False
+>>>
+>>>
+>>> if(1):  # bool(1) ->True
+...     print('True block')
+... else:
+...     print('False block')
+...
+True block
+>>>
+>>>
+>>> name = input('Enter your name:')
+Enter your name:
+>>> name
+''
+>>> len(name)
+0
+>>> if(len(name) == 0):
+...     print('Sorry your input is missing')
+... else:
+...     print(f'Hello..{name}')
+...
+Sorry your input is missing
+>>>
+>>> if(name):
+...     print(f'Hello..{name}')
+... else:
+...     print('Sorry your input is missing')
+...
+Sorry your input is missing
+>>>
+>>> bool(name)
+False
+>>> bool('')
+False
+>>>
+>>> name = input('Enter your name:')
+Enter your name:arun
+>>> bool(name)
+True
+>>> len(name)
+4
+>>> len(name) == 0
+False
+>>>
+===================================================================================================
+
+list -> [] 
+----
+ |->Collection of items(different types)
+ |->each value is separated by ,
+ |->index based 
+
+ |->index,slicing 
+
+ |->supports membership in not in
+ 
+ |->mutable <== we can modify the structure
+   -------------------------------------------
+	|->we can add new data to an existing list
+	|->we can modify an existing data
+	|->we can delete nth data
+
+ app_info = ['flask',5000,'flask.conf','webserver',98.42,True]
+		    |    |	      |		  |     |
+		0      1	2	  3	    4     5  <== index
+		-6    -5       -4        -3        -2    -1  <== index
+
+
+ app_info[0] ->flask
+
+ app_info[-1] -->True
+
+ app_info[1:5] # [5000,'flask.conf','webserver',98.42] 
+	 
+ app_info[-3:] # last 3 items -> ['webserver',98.42,True]
+ 
+ 
+ we can modify an existing data
+ ---------------------------------
+ list_name[oldIndex] = updatedValue  Vs  string_name[oldindex] = updated - Error - str - immutable 
+ .................................
+
+ app_info[4] = 89.12 # we can modify
+          
+ len(input_list) -->output_int
+
+ len([]) -> 0
+ len([1,2]) -> 2
+ 
+|->we can add new data to an existing list
+
+ ListName.append(Value) ->None 
+	  -------------
+ 	Vs
+ Listname.insert(index,Value) -->None
+		 ......
+
+
+|->we can delete nth data
+
+
+ del(Listname[index]) -->None  Vs  Listname.pop() --->remove_last_index value
+				   Listname.pop(index) -->remove nth index value
+							 ...........................
+
+
+
+>>> L  = []
+>>> len(L)
+0
+>>> type(L)
+<class 'list'>
+>>>
+>>> L.append('D1')
+>>> L.append('D2')
+>>> L.append(34)
+>>>
+>>> L
+['D1', 'D2', 34]
+>>>
+>>> L.append(42.3)
+>>> L
+['D1', 'D2', 34, 42.3]
+>>> len(L)
+4
+>>> 'D1' in L
+True
+>>> L[0]
+'D1'
+>>> L[1]
+'D2'
+>>> L[-1]
+42.3
+>>> L[-2:]
+[34, 42.3]
+>>> for var in L:
+...     print(var)
+...
+D1
+D2
+34
+42.3
+>>>
+>>>
+>>>
+>>> L
+['D1', 'D2', 34, 42.3]
+>>>
+>>>
+>>> L.insert(1,'Data')
+>>>
+>>> L
+['D1', 'Data', 'D2', 34, 42.3]
+>>>
+>>> del(L[1]) # delete 1st index
+>>>
+>>> L
+['D1', 'D2', 34, 42.3]
+>>>
+>>> L.pop(1)
+'D2'
+>>> L
+['D1', 34, 42.3]
+>>> removed_item = L.pop(1)
+>>>
+>>> removed_item
+34
+>>> L
+['D1', 42.3]
+>>> L.append('Dx')
+>>> L.append('Dy')
+>>> L.append('Dz')
+>>>
+>>> L
+['D1', 42.3, 'Dx', 'Dy', 'Dz']
+>>>
+>>> L.pop()
+'Dz'
+>>>
+----------------------------------------------------------------------------------------------------
