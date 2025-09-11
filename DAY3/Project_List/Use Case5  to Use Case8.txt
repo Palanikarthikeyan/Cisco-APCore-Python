@@ -1,0 +1,14 @@
+Use Case5 : E-Commerce Price Tracker 
+Track product prices in multiple currencies and send alerts when price drops
+use currency exchange API to convert INR ->USD/EUR
+scrape product prices from Amazon/Flipkart.
+
+Use Case6: Sports Score & Commentary 
+Scrape match commentary (like ESPN text commentary)
+use a sports API for live scores 
+show live score and scraped details in dashboard
+
+Use Case7: Vendor Enrollment Application using Flask
+
+Use Case8: Network device Automation 
+
