@@ -9,6 +9,37 @@ use a sports API for live scores
 show live score and scraped details in dashboard
 
 Use Case7: Vendor Enrollment Application using Flask
+           Vendor Enrollment - Constructor 
+                - vendorName,vGST,vContact  - Registered 
+           Billing - purchase product from Vendor 
+                     - productName,Qty,Cost - collect the product from vendor
+                     - Cost * Qty = 18% Tax + GS
+                     - updated product purchase details to product.log file (append)
+           |
+           DataBase - vendorName,productName,productID,Qty,Cost,Tax,GS - updated to DB
+           |->Search - vendorName (or) productName (or) Cost 
+           |->Response data - json format
 
 Use Case8: Network device Automation 
+ |-> network property file (netinfo.conf)
+      Type=Ethernet
+      bootproto=dhcp
+      onboot=yes
+      defroute=yes
+      ...
+      -------------------
+ |-> read this config file - line by line
+ |-> split each line into multiple values based = 
+ |-> (ex: [Type,Ethernet] =>Key,Value ->Add data to dict
+ |-> dict manipulation:
+        - update dynamic IP ->static 
+        = add newIP = 10.20.30.40
+        = add subnet = 24
+        - update bootproto parameters
+        = add DNS details ..
+ |-> create a new networkConfig - same INI format (Key=Value)
+      |->write updated dict content to new networkConfig file
+ |->  getupdated dict data ->json format
+ |-> Flask - REST -> post
+
 
