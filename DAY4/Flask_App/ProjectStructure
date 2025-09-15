@@ -1,0 +1,4 @@
+Flask_App/ 
+          |__list of python codes(server)
+          |__templates/
+                 |___list of html files(Client)
