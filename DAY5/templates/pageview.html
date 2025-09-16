@@ -1,0 +1,25 @@
+<html>
+<head>
+<title>List of products </title>
+</head>
+<body>
+<h2><center><mark>Product details</mark></center></h2>
+<table border=5>
+<thead>
+ <td> PID </td>
+ <td> ProductName </td>
+ <td> ProductCost </td>
+</thead>
+{% for row in trecords %}
+   <tr>
+       <td>{{row["pid"]}}</td>
+       <td>{{row["pname"]}}</td>
+       <td>{{row["pcost"]}}</td>
+   </tr>
+
+{% endfor %}
+
+</table>
+</center>
+</body>
+</html>
